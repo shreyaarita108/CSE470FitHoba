@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import DietCalendar from './DietCalendar';
+import './Dashstyle.css';
+
 
 const Dashboard = () => {
   const [userProfile, setUserProfile] = useState(null);
@@ -31,15 +33,16 @@ const Dashboard = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">Hello, {userProfile.name}!</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Link to="/mealplan" className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Meal Plan Generator</Link>
-        <Link to="/diet-calendar" className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Diet Calendar</Link>
-        <Link to="/workreco" className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Workout Recommendations</Link>
-        <button className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Calorie Counter</button>
-        <Link to="/showbmi" className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Show BMI</Link>
-        <Link to="/notifications" className="text-lg bg-green-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Notifications</Link>
+        <Link to="/mealplan" className="link-button">Meal Plan Generator</Link>
+        <Link to="/diet-calendar" className="link-button">Diet Calendar</Link>
+        <Link to="/workreco" className="link-button">Workout Recommendations</Link>
+        <button className="action-button">Calorie Counter</button>
+        <Link to="/showbmi" className="link-button">Show BMI</Link>
+        <Link to="/notifications" className="link-button">Notifications</Link>
       </div>
     </div>
   );
+  
 };
 
 export default Dashboard;
