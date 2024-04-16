@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import mainlogo from './thelogolightgrey.png'
+import {Link } from 'react-router-dom';
+
 const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [currentPage, setCurrentPage] = useState('');
@@ -34,18 +36,18 @@ const Header = () => {
                         <span className="font-bold text-3xl tracking-tight text-gray-700">DietPlanner</span>
                     </div>
                     <div className="flex space-x-4">
-                        <a href="/" className={`text-white-500 hover:text-gray ${currentPage === '/' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Home</a>
+                        <Link to="/" className={`text-white-500 hover:text-gray ${currentPage === '/' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Home</Link>
                         {isLoggedIn ? (
                             <>
-                                <a href="/post" className={`text-white-500 hover:text-gray ${currentPage === '/post' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Community</a>
-                                <a href="/dashboard" className={`text-white-500 hover:text-gray ${currentPage === '/dashboard' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Dashboard</a>
-                                <a href="/userprofile/:username" className={`text-white-500 hover:text-gray ${currentPage === '/userprofile/:username' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Profile</a>
+                                <Link to="/post" className={`text-white-500 hover:text-gray ${currentPage === '/post' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Community</Link>
+                                <Link to="/dashboard" className={`text-white-500 hover:text-gray ${currentPage === '/dashboard' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Dashboard</Link>
+                                <Link to="/userprofile/:username" className={`text-white-500 hover:text-gray ${currentPage === '/userprofile/:username' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Profile</Link>
                                 <button className={`text-white-500 hover:text-gray ${currentPage === '/logout' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`} onClick={handleLogout}>Logout</button>
                             </>
                         ) : (
                             <>
-                                <a href="/login" className={`text-white-500 hover:text-gray ${currentPage === '/login' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Login</a>
-                                <a href="/register" className={`text-white-500 hover:text-gray ${currentPage === '/register' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Register</a>
+                                <Link to="/login" className={`text-white-500 hover:text-gray ${currentPage === '/login' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Login</Link>
+                                <Link to="/register" className={`text-white-500 hover:text-gray ${currentPage === '/register' ? 'bg-gray-400' : 'hover:bg-gray-600'} px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300`}>Register</Link>
                             </>
                         )}
                     </div>

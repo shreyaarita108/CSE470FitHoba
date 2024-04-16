@@ -106,7 +106,7 @@ const WorkReco = () => {
         Day 6: What should be my workout plan and how to do recovery from the workout?
         Day 7: What should be my workout plan and how to do recovery from the workout?
         Each of the questions for each of the day must refer to different  exercises that can be done at home.
-        And give me the output in HTML table format only. Keep the BMI Section separated. And keep all the detailed description in the table only And make the html format elegant.use CSS.The Table should be in this format, Day , Workout Plan, Recovery. And At the bottom a box for BMI Stage.no need for paragraphic description in the beginning.
+        And give me the output in HTML table format only. Keep the BMI Section separated. And keep all the detailed description in the table only And make the html format elegant.use CSS., .The Table should be in this format, Day , Workout Plan, Recovery. And At the bottom a box for BMI Stage.No need for paragraphic description in the beginning 
       `;
       const response = await llm.chat.completions.create({
         model: 'mistralai/Mixtral-8x7B-Instruct-v0.1',

@@ -78,13 +78,15 @@ const ShowBmi = () => {
             } else if (bmiResult.bmi < 34.9) {
                 bmiStage = 'Obesity (Class 1)';
                 bmiDescription = (
-                    
+                    <div className="text-center">
+                    <img src="https://banner2.cleanpng.com/20180302/ajw/kisspng-fat-adipose-tissue-royalty-free-clip-art-depressed-beer-belly-5a9927f1668d72.2385101015199866734201.jpg" alt="BMI Description" className="mx-auto mb-4" />
                     <ul className="text-centerlist-disc mt-2">
                         <li>Higher risks of type 2 diabetes</li>
                         <li>Increased risk of heart disease</li>
                         <li>Stroke risk</li>
                         <li>Risk of certain cancers</li>
                     </ul>
+                    </div>
                 );
             } else {
                 bmiStage = 'Severe Obesity';
