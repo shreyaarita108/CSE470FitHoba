@@ -1,0 +1,23 @@
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-user {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
