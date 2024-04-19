@@ -148,6 +148,7 @@ const Dashboard = () => {
       </Link>
     </div>
     <div className='rounded-xl'>
+    <Link to="/caloriecounter">
       <motion.button
         whileHover={{ scale: 1.1 }} // Scale to 1.1 on hover
         className="relative"
@@ -165,6 +166,7 @@ const Dashboard = () => {
           <p className="text-white text-4xl">Calorie Counter</p>
         </motion.div>
       </motion.button>
+      </Link>
     </div>
 
           </div>
@@ -191,6 +193,7 @@ const Dashboard = () => {
       </Link>
     </div>
     <div className='rounded-xl'>
+    <Link to="/workoutvideo">
       <motion.button
         whileHover={{ scale: 1.1 }} // Scale to 1.1 on hover
         className="relative"
@@ -205,9 +208,10 @@ const Dashboard = () => {
           whileHover={{ opacity: 0.5 }} // Opacity to 50% on hover
           whileTap={{ opacity: 0 }} // Hide text on tap
         >
-          <p className="text-white text-4xl">Notifications</p>
+          <p className="text-white text-4xl">Workout Videos</p>
         </motion.div>
       </motion.button>
+      </Link>
     </div>
     <div className='rounded-xl'>
     <Link to="/diet-calendar" >

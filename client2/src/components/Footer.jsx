@@ -302,7 +302,7 @@ const Footer = () => {
               </motion.button>
             </div>
             <h1 className="text-xs  text-center mt-2 text-gray-800">
-              @ 2024 All rights reserved by Imam| Developed by{" "}
+              @ 2024 All rights reserved by Mamun Abdullah| Developed by{" "}
               <a href="" target="_blank">
                 <span
                   style={{

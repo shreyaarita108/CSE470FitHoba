@@ -121,7 +121,7 @@ const UserProfile = () => {
                     Update Profile
                 </Link>
                 
-                <img className='h-[10rem] w-[10rem] rounded-full mt-[-5rem] border-4 border-gray-800' src='https://img.freepik.com/premium-photo/anime-male-avatar_950633-914.jpg' alt='mamun'/>
+                <img className='h-[10rem] w-[10rem] rounded-full mt-[-7rem] border-4 border-gray-800 ' src='https://img.freepik.com/premium-photo/anime-male-avatar_950633-914.jpg' alt='mamun'/>
 
                 <Link
             to="/user/passwordchange"

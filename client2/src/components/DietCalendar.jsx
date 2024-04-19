@@ -102,27 +102,36 @@ const DietCalendar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-[60vh] mt-[25rem] ml-[60rem]">
       <div className="flex-grow flex">
         <div className="w-3/4">
-          <h3 className="text-lg font-semibold mb-10">Diet Calendar</h3>
+        <h3 className="text-3xl font-bold text-green-600 mb-10" style={{ fontFamily: 'Roboto, sans-serif' }}>
+  Welcome to your Diet Calendar
+</h3>
+
           <div className="mb-4">
             <button onClick={addDietDate} className="bg-green-500 text-white px-4 py-2 rounded">
               Mark Diet Maintained
             </button>
           </div>
           <Calendar
+          
             onChange={handleDateClick}
             value={selectedDate}
             tileClassName={tileClassName}
+            className="w-full h-64" // Tailwind CSS for full width
+            style={{ fontSize: "16px" }} // Inline CSS for font size
           />
-          {selectedDate && (
-            <div className="mt-4">
-              <p className="font-semibold">Selected Date:</p>
-              <p>{selectedDate.toLocaleDateString()}</p>
-            </div>
-          )}
-          {message && <p>{message}</p>}
+        <div className={`mt-4 ${selectedDate || message ? 'mt-8' : ''}`}>
+  {selectedDate && (
+    <div>
+      <p className="font-semibold">Selected Date:</p>
+      <p>{selectedDate.toLocaleDateString()}</p>
+    </div>
+  )}
+  {message && <p>{message}</p>}
+</div>
+
           <style>
             {`
               .diet-maintained {
@@ -134,16 +143,17 @@ const DietCalendar = () => {
             `}
           </style>
           <div className="text-left mt-8">
-            <div className="text-2xl font-bold text-green-900 mb-4">
-              Diet Maintenance
-            </div>
-            <p>Diet maintained for {calculateDaysMaintained()} days</p>
-            <p>Diet maintained for {calculateDaysMaintainedThisMonth()} days this month</p>
-          </div>
+  <div className="text-3xl font-bold mb-4" style={{ color: '#48BB78' }}>
+    Diet Maintenance
+  </div>
+  <p className="text-lg">
+    Diet maintained for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{calculateDaysMaintained()}</span> days
+  </p>
+  <p className="text-lg">
+    Diet maintained for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{calculateDaysMaintainedThisMonth()}</span> days this month
+  </p>
+</div>
         </div>
-      </div>
-      <div className="text-center mt-auto py-4">
-        <p></p>
       </div>
     </div>
   );
