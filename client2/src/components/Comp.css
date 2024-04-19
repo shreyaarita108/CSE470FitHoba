@@ -1,0 +1,24 @@
+.nav-link {
+    padding: 10px 20px;
+    color: #4a5568;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #2d3748;
+    background-color: #cbd5e0;
+    border-radius: 6px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link:first-child {
+    margin-left: 0;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}

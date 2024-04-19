@@ -97,6 +97,7 @@ const WorkReco = () => {
         Based on these details, here are some workout recommendations tailored to my needs:
         First tell me description of my BMI rate ,in which stage that I fall in. 
         Using these details answer the following question in 5 paragraphs (each with bullet points of the meals) with each paragraph starting with "#":
+        keep the details as simple as possible and in less words.
         Day 1: What should be my workout plan and how to do recovery from the workout?
         Day 2: What should be my workout plan and how to do recovery from the workout?
         Day 3: What should be my workout plan and how to do recovery from the workout?
@@ -105,6 +106,7 @@ const WorkReco = () => {
         Day 6: What should be my workout plan and how to do recovery from the workout?
         Day 7: What should be my workout plan and how to do recovery from the workout?
         Each of the questions for each of the day must refer to different  exercises that can be done at home.
+        And give me the output in HTML table format only. Keep the BMI Section separated. And keep all the detailed description in the table only And make the html format elegant.use CSS., .The Table should be in this format, Day , Workout Plan, Recovery. And At the bottom a box for BMI Stage.No need for paragraphic description in the beginning 
       `;
       const response = await llm.chat.completions.create({
         model: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
@@ -148,11 +150,8 @@ const WorkReco = () => {
     </div>
     {/* Output Section */}
     <div className="p-4">
-      <div className="border border-gray-300 rounded-md shadow-md p-4">
-        <h2 className="text-lg font-semibold mb-4">Your Workout Recommendations</h2>
-        <div className="text-sm leading-relaxed text-gray-700">
-          {mealPlan}
-        </div>
+    <div className="p-4">
+        <div className="border border-gray-300 rounded-md p-4" dangerouslySetInnerHTML={{ __html: mealPlan }} />
       </div>
     </div>
   </div>

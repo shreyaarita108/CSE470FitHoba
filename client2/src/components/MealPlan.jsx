@@ -88,6 +88,7 @@ const MealPlan = () => {
         My calorie goal for the day is ${requiredCalories}.
         I am ${dietary}. I want to have 5 meals in a day.
         Create a meal plan using these details.
+        Try to suggest Bangladeshi cuisine.
         Using these details answer the following question in 5 paragraphs (each with bullet points of the meals) with each paragraph starting with "#":
         meal1: What should be the breakfast and how many calories are in there?
         meal2: What should be the midday snack and how many calories are in there?
