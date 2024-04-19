@@ -97,36 +97,29 @@ const WorkoutVideo = () => {
         switch (bmiStage) {
             case 'Underweight':
                 return (
-                    <div>
-                    <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-                    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-                        
-                    </div>
-                    <div className="p-6">
+                    <div className="flex flex-row gap-4">
+                    <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg ">
+                                        <div className="flex flex-row gap-4 p-6 items-center">
                         {/* Embedding YouTube Playlist Link */}
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/zlyqr9bNs1E?si=cCKkpy5MT8t93uPd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-                    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-                       
-                    </div>
-                    <div className="p-6">
+                  
+                    <div className="flex flex-row gap-4 p-6 items-center">
                         {/* Embedding YouTube Playlist Link */}
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Qi0p-6XcTX0?si=L4P16KJdT_n0HUL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-                    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-                    </div>
-                    <div className="p-6">
+               
+                    <div className="flex flex-row gap-4 p-6 items-center">
                         {/* Embedding YouTube Playlist Link */}
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/FDpM-CGMXcw?si=zQf5jblIkhmuUtqp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                     </div>
-                
                 );
             case 'Normal weight':
                 return (
@@ -249,7 +242,7 @@ const WorkoutVideo = () => {
         }
     };
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
+        <div className="flex flex-col gap-10 items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
         <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
             <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
                 <h2 className="text-3xl text-center font-bold text-gray-800 mb-4">BMI Result</h2>
@@ -259,9 +252,9 @@ const WorkoutVideo = () => {
             </div>
         </div>
 
-        <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
+        <div className="flex flex-row gap-4 max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
    
-            <div className="p-6">
+            <div className="flex flex-row gap-4 p-6 ml-[-30rem]">
                 {RenderVideoEmbed()}
             </div>
         </div>
