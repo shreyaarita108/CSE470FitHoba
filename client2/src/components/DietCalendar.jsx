@@ -102,57 +102,47 @@ const DietCalendar = () => {
   };
 
   return (
-    <div className="flex flex-col h-[60vh] mt-[25rem] ml-[50rem]">
-      <div className="flex-grow flex">
-        <div className="w-3/4">
-        <h3 className="text-3xl font-bold text-green-600 mb-10" style={{ fontFamily: 'Roboto, sans-serif' }}>
-  Welcome to your Diet Calendar
-</h3>
-
+    <div className="flex flex-col h-[60vh] mt-20 ml-[30rem] overflow-hidden">
+      <h3 className="text-3xl font-bold text-green-600 mb-10" style={{ fontFamily: 'Roboto, sans-serif' }}>
+        Welcome to your Diet Calendar
+      </h3>
+      <div className="flex w-full h-full">
+        <div className="flex-grow">
           <div className="mb-4">
             <button onClick={addDietDate} className="bg-green-500 text-white px-4 py-2 rounded">
               Mark Diet Maintained
             </button>
           </div>
           <Calendar
-          
             onChange={handleDateClick}
             value={selectedDate}
             tileClassName={tileClassName}
-            className="w-full h-auto" // Tailwind CSS for full width
-            style={{ fontSize: "16px" }} // Inline CSS for font size
+            className="w-full"
+            style={{ fontSize: "16px" }}
           />
-        <div className={`mt-4 ${selectedDate || message ? 'mt-8' : ''}`}>
-  {selectedDate && (
-    <div>
-      <p className="font-semibold">Selected Date:</p>
-      <p>{selectedDate.toLocaleDateString()}</p>
-    </div>
-  )}
-  {message && <p>{message}</p>}
-</div>
-
-          <style>
-            {`
-              .diet-maintained {
-                background-color: rgba(144, 238, 144, 0.5) !important; /* Light green color */
-              }
-              .diet-added {
-                background-color: blue !important;
-              }
-            `}
-          </style>
-          <div className="text-left mt-8">
-  <div className="text-3xl font-bold mb-4" style={{ color: '#48BB78' }}>
-    Diet Maintenance
-  </div>
-  <p className="text-lg">
-    Diet maintained for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{calculateDaysMaintained()}</span> days
-  </p>
-  <p className="text-lg">
-    Diet maintained for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{calculateDaysMaintainedThisMonth()}</span> days this month
-  </p>
-</div>
+          <div className={`mt-4 ${selectedDate || message ? 'mt-8' : ''}`}>
+            {selectedDate && (
+              <p className="font-semibold">Selected Date: {selectedDate.toLocaleDateString()}</p>
+            )}
+            {message && <p>{message}</p>}
+          </div>
+        </div>
+        <div className="w-2/4 pl-1">
+          <div className="text-left">
+            <div className="text-3xl font-bold mb-6" style={{ color: '#48BB78' }}>
+              Diet Maintenance
+            </div>
+            <p className="text-lg">
+              Diet maintained for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{dietDates.filter(date => isDateDietMaintained(date)).length}</span> days
+            </p>
+            <p className="text-lg">
+              Diet maintained this month for <span style={{ color: '#F56565', fontSize: '1.125rem' }}>{dietDates.filter(date => {
+                const dateObj = new Date(date);
+                const currentDate = new Date();
+                return dateObj.getMonth() === currentDate.getMonth() && dateObj.getFullYear() === currentDate.getFullYear();
+              }).length}</span> days
+            </p>
+          </div>
         </div>
       </div>
     </div>
