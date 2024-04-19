@@ -100,7 +100,7 @@ const CalorieCounter = () => {
         {/* Output Section */}
         <div className="w-1/2 p-4">
           {suggestions.map((suggestion, index) => (
-            <div key={index} className="py-4 bg-purple-100 rounded-lg px-4 mb-4">
+            <div key={index} className="py-4 bg-lime-100 rounded-lg px-4 mb-4">
               <p className="mt-2">{suggestion}</p>
             </div>
           ))}
