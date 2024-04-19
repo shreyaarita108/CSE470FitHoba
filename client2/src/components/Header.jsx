@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import mainlogo from './thelogolightgrey.png'
+import mainlogo from "./Assets/11.png"
 import {Link } from 'react-router-dom';
 import Wave from "react-wavify";
 
@@ -45,7 +45,7 @@ const Header = () => {
                               "0 0 5px #9cc030, 0 0 10px #000, 0 0 15px #000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #000 ",
                           }}
                         >
-                            DIETPLANNER
+                            FIT HOBA ?
                         </span>
                         
                         </span>

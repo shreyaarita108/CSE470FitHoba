@@ -34,7 +34,10 @@ const WorkoutVideo = () => {
                 bmiDescription = (
                     <div className="text-center">
                     <ul className="text-centerlist-disc mt-2">
-                    <h1>For you the Suggested Videos are given here:</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 my-8 font-roboto">
+  For you, the Suggested Videos are given here:
+</h1>
+
                     </ul>
                     </div>
                 );
@@ -43,16 +46,22 @@ const WorkoutVideo = () => {
                 bmiDescription = (
                     <div className="text-center">
                     <ul className="text-centerlist-disc mt-2">
-                    <h1>For you the Suggested Videos are given here:</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 my-8 font-roboto">
+  For you, the Suggested Videos are given here:
+</h1>
+
                     </ul>
                     </div>
                 );
             } else if (bmiResult.bmi < 29.9) {
                 bmiStage = 'Overweight';
                 bmiDescription = (
-                    <div className="text-center">
+                    <div className="text-center font-roboto ">
                     <ul className="text-centerlist-disc mt-2">
-                    <h1>For you the Suggested Videos are given here:</h1>
+                    <p className="text-3xl font-bold text-center text-gray-800 my-8 font-comic-serif">
+  For you, the Suggested Videos are given here:
+</p>
+
                     </ul>
                     </div>
                 );
@@ -61,7 +70,10 @@ const WorkoutVideo = () => {
                 bmiDescription = (
                     <div className="text-center">
                     <ul className="text-centerlist-disc mt-2">
-                    <h1>For you the Suggested Videos are given here:</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 my-8 font-roboto">
+  For you, the Suggested Videos are given here:
+</h1>
+
                     </ul>
                     </div>
                 );
@@ -70,7 +82,10 @@ const WorkoutVideo = () => {
                 bmiDescription = (
                     <div className="text-center">
                     <ul className="text-centerlist-disc mt-2">
-                    <h1>For you the Suggested Videos are given here:</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 my-8 font-roboto">
+  For you, the Suggested Videos are given here:
+</h1>
+
                     </ul>
                     </div>
                 );
@@ -123,29 +138,24 @@ const WorkoutVideo = () => {
                 );
             case 'Normal weight':
                 return (
-                    <div>
+                   
+                    <div className="flex flex-row gap-4">
     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-        
-    </div>
+    
     <div className="p-6">
         {/* Embedding YouTube Playlist Link */}
         <iframe width="560" height="315" src="https://www.youtube.com/embed/JzAShhATDl8?si=_SMV5GF-1vXRCDI5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-       
-    </div>
+   
     <div className="p-6">
         {/* Embedding YouTube Playlist Link */}
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9o0UPuDBM8M?si=I7XiNyty0Cq13I19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-    <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
-
-    </div>
+   
     <div className="p-6">
         {/* Embedding YouTube Playlist Link */}
         <iframe width="560" height="315" src="https://www.youtube.com/embed/-hSma-BRzoo?si=zFhyEo_k05YqZMVd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -156,7 +166,7 @@ const WorkoutVideo = () => {
                 );
                 case 'Overweight':
                     return (
-                        <div>
+                        <div className="flex flex-row gap-4">
         <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
        
         <div className="p-6">
@@ -184,7 +194,7 @@ const WorkoutVideo = () => {
                     );
                     case 'Obesity (Class 1)':
                         return (
-                            <div>
+                            <div className="flex flex-row gap-4">
             <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
            
             <div className="p-6">
@@ -211,7 +221,7 @@ const WorkoutVideo = () => {
                         );
                         case 'Severe Obesity':
                             return (
-                                <div>
+                                <div className="flex flex-row gap-4">
                 <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
               
                 <div className="p-6">
@@ -244,7 +254,7 @@ const WorkoutVideo = () => {
     return (
         <div className="flex flex-col gap-10 items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
         <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-            <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
+            <div className="bg-gradient-to-r from-lime-50 to-lime-300 p-6 rounded-t-lg">
                 <h2 className="text-3xl text-center font-bold text-gray-800 mb-4">BMI Result</h2>
             </div>
             <div className="p-6">

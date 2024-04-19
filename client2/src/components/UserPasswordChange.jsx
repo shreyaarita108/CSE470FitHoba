@@ -65,8 +65,8 @@ const UserPasswordChange = () => {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
-  <div className="max-w-md mx-auto bg-gradient-to-r from-blue-400 to-purple-500 shadow-md rounded px-8 py-6 mt-5 mb-10">
+    <div className="flex justify-center items-center h-screen">
+  <div className="max-w-md mx-auto bg-black shadow-md rounded px-8 py-10 mt-10 mb-15">
     <div className="p-8">
     <h2 className="text-2xl font-semibold mb-4 text-center text-white">Change Password</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -109,7 +109,7 @@ const UserPasswordChange = () => {
       {error && <div className="mt-4 bg-red-100 text-red-700 px-4 py-2 rounded-md">{error}</div>}
     </div>
   </div>
-</div>
+  </div>
 
 
   );

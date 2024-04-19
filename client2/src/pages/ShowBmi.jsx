@@ -126,7 +126,7 @@ const ShowBmi = () => {
     return (
 <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
     <div className="max-w-md w-full mt-10 bg-white rounded-lg shadow-lg">
-        <div className="bg-gradient-to-r from-pink-200 to-pink-300 p-6 rounded-t-lg">
+        <div className="bg-gradient-to-r from-lime-50 to-lime-300 p-6 rounded-t-lg">
             <h2 className="text-3xl text-center font-bold text-gray-800 mb-4">BMI Result</h2>
         </div>
         <div className="p-6">

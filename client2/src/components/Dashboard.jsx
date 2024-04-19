@@ -51,10 +51,10 @@ const Dashboard = () => {
     //     <Link to="/workreco" className="link-button">Workout Recommendations</Link>
     //     <button className="action-button">Calorie Counter</button>
     //     <Link to="/showbmi" className="link-button">Show BMI</Link>
-    //     <Link to="/notifications" className="link-button">Notifications</Link>
+    //     <Link to="/notifications" className="link-button">Notifications</Lnk>
     //   </div>
     // </div> 
-    <div className="flex flex-col font-[TimesNewRoman]  mt-20 mb-32 mb-[-4rem] ">
+    <div className="flex flex-col font-[TimesNewRoman]  mt-20 mb-32 mb-[-1rem] ">
       {/* <div className="w-auto relative h-[100vh] bg-black  text-white"> */}
 
       <div className='flex flex-col '>
@@ -100,7 +100,8 @@ const Dashboard = () => {
       style={{
 
         background: "rgb(255,255,255)",
-        background: "linear-gradient(270deg, rgba(255,255,255,1) 7%, rgba(156,192,48,1) 100%)"
+        background: "linear-gradient(270deg, rgba(255,255,255,1) 7%, rgba(156,192,48,1) 100%)",
+        padding: "1rem"
       }}    
       className="flex flex-col items-center h-[100vh] pt-32 gap-16">
           <div className='flex flex-row gap-[20rem] mx-10'>
@@ -233,7 +234,7 @@ const Dashboard = () => {
         </motion.div>
       </motion.button>
       </Link>
-    </div>
+    </div >
 
           </div>
 

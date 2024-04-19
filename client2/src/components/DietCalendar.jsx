@@ -102,7 +102,7 @@ const DietCalendar = () => {
   };
 
   return (
-    <div className="flex flex-col h-[60vh] mt-[25rem] ml-[60rem]">
+    <div className="flex flex-col h-[60vh] mt-[25rem] ml-[50rem]">
       <div className="flex-grow flex">
         <div className="w-3/4">
         <h3 className="text-3xl font-bold text-green-600 mb-10" style={{ fontFamily: 'Roboto, sans-serif' }}>
@@ -119,7 +119,7 @@ const DietCalendar = () => {
             onChange={handleDateClick}
             value={selectedDate}
             tileClassName={tileClassName}
-            className="w-full h-64" // Tailwind CSS for full width
+            className="w-full h-auto" // Tailwind CSS for full width
             style={{ fontSize: "16px" }} // Inline CSS for font size
           />
         <div className={`mt-4 ${selectedDate || message ? 'mt-8' : ''}`}>

@@ -154,7 +154,7 @@ const Footer = () => {
               </motion.button>
             </div>
             <h1 className="text-xs w-96 text-center mt-1 text-gray-800">
-              @ 2024 All rights reserved by IMAM | Developed by{" "}
+              @ 2024 All rights reserved by SMMZ7 | Developed by{" "}
               <a href="" target="_blank">
                 <span
                   style={{
@@ -163,7 +163,7 @@ const Footer = () => {
                       "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7F193B, 0 0 20px #7F193B, 0 0 30px #7F193B, 0 0 40px #7F193B, 0 0 55px #7F193B, 0 0 75px #7F193B",
                   }}
                 >
-                  Mamun Abdullah
+                  SMMZ7
                 </span>
               </a>
               {" Designed by "}
@@ -175,7 +175,7 @@ const Footer = () => {
                       "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7F193B, 0 0 20px #7F193B, 0 0 30px #7F193B, 0 0 40px #7F193B, 0 0 55px #7F193B, 0 0 75px #7F193B",
                   }}
                 >
-                  Tahsina Mouikh
+                  SMMZ7
                 </span>
               </a>
             </h1>
@@ -323,7 +323,7 @@ const Footer = () => {
                       "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7F193B, 0 0 20px #7F193B, 0 0 30px #7F193B, 0 0 40px #7F193B, 0 0 55px #7F193B, 0 0 75px #7F193B",
                   }}
                 >
-                  Tahsina Mouikh
+                  SMMZ7
                 </span>
               </a>
             </h1>
