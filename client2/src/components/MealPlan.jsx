@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OpenAI from "openai";
 import axios from 'axios';
+import dietbg from './dietbg.webp'
 // import { PromptTemplate } from 'langchain/prompts';
 // import { ResponseSchema, StructuredOutputParser } from 'langchain/output_parsers';
 
@@ -126,21 +127,29 @@ const MealPlan = () => {
   };
 
   return (
-<div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
-  <div className="max-w-4xl w-full mx-auto flex mt-20">
-    {/* Form Section */}
-
-    <div className="w-1/2 p-4">
-    <label htmlFor="dietary" className="mb-1 block text-xl text-gray-800">Required Calories</label>
-      <input
-        className="mb-2 p-2 border rounded-md w-full"
-        type="text"
-        value={requiredCalories}
-        onChange={(e) => setRequiredCalories(e.target.value)}
-        
-        
-        required
-      />
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300 relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={dietbg}  
+            alt="Background"
+            className="object-cover w-full h-full opacity-65"
+          />
+        </div>
+    
+        <div className="max-w-4xl w-full mx-auto flex mt-20 relative z-10"> 
+          {/* Form Section */}
+          <div className="w-1/2 p-4">
+        <label htmlFor="dietary" className="mb-1 block text-xl text-gray-800">Required Calories</label>
+          <input
+            className="mb-2 p-2 border rounded-md w-full"
+            type="text"
+            value={requiredCalories}
+            onChange={(e) => setRequiredCalories(e.target.value)}
+            
+            
+            required
+          />
       
 
       <label htmlFor="dietary" className="mb-1 block text-xl text-gray-800">Dietary Preference</label>
