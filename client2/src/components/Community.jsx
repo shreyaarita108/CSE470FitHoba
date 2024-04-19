@@ -114,11 +114,11 @@ const Community = () => {
     }, [username]); 
 
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
+        <div className="flex min-h-screen bg-gradient-to-r from-beige-100 to-lime-200">
             <div className="max-w-2xl mx-auto flex-grow mt-20 ml-20">
                 <ul className="divide-y divide-gray-300">
                     {posts.map((post) => (
-                        <li key={post._id} className="py-4 bg-purple-100 rounded-lg px-4 mb-4">
+                        <li key={post._id} className="py-4 bg-gray-100 rounded-lg px-4 mb-4">
                             <div className="mb-2">
                                 <Link to={`Details/${post._id}`}>
                                     <h2 className="text-xl font-semibold">{post.title}</h2>
@@ -131,10 +131,8 @@ const Community = () => {
                             {post.name !== username  && (
                                 <div className="flex items-center mt-2">
                                 <button
-                                    className="text-sm bg-blue-500 text-white px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="text-sm bg-blue-500 text-white px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-600"
                                     onClick={() => likePost(post._id)}
-                                    
-                                    
                                 >
                                     Like
                                 </button>
@@ -152,7 +150,7 @@ const Community = () => {
                 </ul>
             </div>
             <div className="max-w-2xl mx-auto flex-grow mt-20 ml-20">
-                <div className='fixed py-4 bg-purple-100 rounded-lg px-4 mb-4 mt-20'>
+                <div className='fixed py-4 bg-gray-100 rounded-lg px-4 mb-4 mt-20'>
                     <h1 className="text-2xl font-semibold mb-4">New Blog Post</h1>
                     <input
                         type="text"
@@ -168,7 +166,7 @@ const Community = () => {
                         onChange={(e) => setPostContent(e.target.value)}
                         className="w-full border rounded py-2 px-3 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     ></textarea>
-                    <button onClick={sendPost} className="text-lg bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Post</button>
+                    <button onClick={sendPost} className="text-lg bg-lime-300 hover:bg-lime-600 text-black font-medium py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">Post</button>
                 </div>
             </div>
         </div>

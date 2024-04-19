@@ -131,27 +131,35 @@ const MealPlan = () => {
     {/* Form Section */}
 
     <div className="w-1/2 p-4">
+    <label htmlFor="dietary" className="mb-1 block text-xl text-gray-800">Required Calories</label>
       <input
         className="mb-2 p-2 border rounded-md w-full"
         type="text"
         value={requiredCalories}
         onChange={(e) => setRequiredCalories(e.target.value)}
-        placeholder="Required Calories"
-        required
-      />
-      <input
-        className="mb-2 p-2 border rounded-md w-full"
-        type="text"
-        value={dietary}
-        onChange={(e) => setDietary(e.target.value)}
-        placeholder="Dietary Preference"
+        
+        
         required
       />
       
-      <button
-        className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600"
-        onClick={getMealPlan}
-      >
+
+      <label htmlFor="dietary" className="mb-1 block text-xl text-gray-800">Dietary Preference</label>
+  <select
+    id="dietary"
+    className="mb-2 p-2 border rounded-md w-full"
+    value={dietary}
+    onChange={(e) => setDietary(e.target.value)}
+    required
+  >
+    <option value="">Select Dietary Preference</option>
+    <option value="Vegetarian">Vegetarian</option>
+    <option value="Non-vegetarian">Non-vegetarian</option>
+  </select>
+  
+  <button
+    className="mb-4 px-4 py-2 bg-lime-300 text-black rounded-md shadow-md hover:bg-lime-600"
+    onClick={getMealPlan}
+  >
         Generate Meal Plan
       </button>
       {error && <p className="text-red-500">{error}</p>}
@@ -160,7 +168,7 @@ const MealPlan = () => {
     {/* Output Section */}
     <div className="w-1/2 p-4">
       {mealPlan.map((meal, index) => (
-        <div key={index} className="py-4 bg-purple-100 rounded-lg px-4 mb-4">
+        <div key={index} className="py-4 bg-lime-90 rounded-lg px-4 mb-4">
           <p className="mt-2" dangerouslySetInnerHTML={{ __html: meal.description.replace(/\n/g, '<br>') }}></p>
         </div>
       ))}

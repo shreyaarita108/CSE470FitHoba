@@ -44,7 +44,7 @@ const Register = () => {
   };
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-beige-100 to-beige-300">
-      <div className="max-w-2xl w-full bg-pink-100 shadow-lg rounded-lg overflow-hidden mt-20">
+      <div className="max-w-2xl w-full bg-gray-100 shadow-lg rounded-lg overflow-hidden mt-20">
       {isLoggedIn && (
           <div className="text-center">
             <p className="text-2xl font-semibold mb-6 text-center text-gray-800 px-6 pt-6">Please log out before registering another account</p>
@@ -78,14 +78,14 @@ const Register = () => {
             <input type="date" id="dob" name="dob" value={formData.dob} onChange={handleChange} className="form-input w-full" required />
           </div>
           <div className="mb-6">
-            <label htmlFor="height" className="block text-gray-700 text-sm font-bold mb-2">Height</label>
+            <label htmlFor="height" className="block text-gray-700 text-sm font-bold mb-2">Height(cm)</label>
             <input type="number" id="height" name="height" value={formData.height} onChange={handleChange} className="form-input w-full" required />
           </div>
           <div className="mb-6">
             <label htmlFor="weight" className="block text-gray-700 text-sm font-bold mb-2">Weight(kg):</label>
             <input type="number" id="weight" name="weight" value={formData.weight} onChange={handleChange} className="form-input w-full" required />
           </div>
-          <button type="submit" className="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 w-full">Register</button>
+          <button type="submit" className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-black font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 w-full">Register</button>
         </form>
         </>
         )}

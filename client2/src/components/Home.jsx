@@ -12,8 +12,9 @@ const Home = () => {
             <div className="flex justify-between w-full max-w-7x1 px-12">
                 {/* Left side with buttons */}
                 <div className="flex flex-col items-start justify-center w-1/2">
-                    <h1 className="text-5xl font-semibold text-gray-800 mb-4">Eat Smart, Live Well</h1>
-                    <h1 className="text-5xl font-semibold text-gray-800 mb-8">Your Personalized Path to Health!</h1>
+                <h1 className="text-4xl font-semibold text-gray-800 mb-4" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>Eat Smart, Live Well</h1>
+                <h1 className="text-4xl font-semibold text-gray-800 mb-4" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>Your Personalized Path to Health!</h1>
+
                     <div className="flex flex-col items-start">
                         {!isLoggedIn && (
                             <>
